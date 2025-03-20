@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(23, 23, 26);
+}
+
+nav {
+    background-color: rgb(30, 30, 35);
+    color: white;
+    padding: 0px;
+    display: flex;
+    justify-content: top;
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+
+.btnNavbar{
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgb(37, 37, 43);
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+}
+
+.btnNavbar:hover{
+    background: rgb(64, 64, 74);
+}

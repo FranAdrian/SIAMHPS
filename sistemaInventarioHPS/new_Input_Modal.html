@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleMainInventoryLight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nueva entrada</title>
+</head>
+<body>
+
+    <div id="miModal" class="modal">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <div class="modal-content">
+
+            <!-- <h2>Agregar activo</h2> -->
+
+            <form>
+
+                <p for="nombre">Nombre:</p>
+                <input type="text" id="nombre">
+
+                <p for="tipo">Tipo:</p>
+                <input type="text" id="tipo">
+
+                <label for="piso">Piso:</label>
+                <select id="piso">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select><br><br>
+
+                <p for="area">Área:</p>
+                <input type="text" id="area">
+
+                <p for="fabricante">Fabricante:</p>
+                <input type="text" id="fabricante">
+
+                <p for="modelo">Modelo:</p>
+                <input type="text" id="modelo">
+
+                <p for="numeroSerie">Número de serie:</p>
+                <input type="text" id="numeroSerie">
+
+                <button type="submit" id="btnAnadirActivo">Añadir activo a inventario</button>
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
