@@ -76,7 +76,9 @@ i {
     color: white;
 }
 
-.navbar ul li button i{
+.navbar i{
+    height: auto;
+    width: auto;
     color: rgb(26, 96, 225);
     font-size: 3vb;
     margin-right: 2.5vb;
