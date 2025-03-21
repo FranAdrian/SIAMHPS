@@ -58,6 +58,61 @@ rows.forEach((row, index) => {
     }
 });
 
+//----------ANIMACION PARA DESPLAZAMIENTO DE TEXTO EN CELDAS QUE NO SE ALCANZAN A VISUALIZAR----------------
 
+// Añade el CSS para el efecto de desplazamiento del texto en las celdas pequeñas.
+const scrollStyle = document.createElement('style');
+scrollStyle.textContent = `
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    90% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.table-cell-scroll {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+.table-cell-scroll span {
+    display: inline-block;
+    animation: scroll 2s linear infinite;
+    animation-play-state: paused;
+}
+.table-row-scroll:hover .table-cell-scroll span {
+    animation-play-state: running;
+}
+`;
+document.head.appendChild(scrollStyle);
 
+// Aplica el efecto de desplazamiento a las celdas cuyo contenido no se alcanza a visualizar.
+rows.forEach(row => {
+    let hasOverflowingCell = false;
+    row.querySelectorAll('td').forEach(cell => {
+        if (cell.scrollWidth > cell.clientWidth) {
+            const span = document.createElement('span');
+            span.textContent = cell.textContent; // No repite el texto
+            cell.textContent = '';
+            cell.appendChild(span);
+            cell.classList.add('table-cell-scroll');
+            hasOverflowingCell = true;
+        }
+    });
+    if (hasOverflowingCell) {
+        row.classList.add('table-row-scroll');
+        row.addEventListener('mouseleave', () => {
+            row.querySelectorAll('.table-cell-scroll span').forEach(span => {
+                span.style.animation = 'none';
+                // Forzar el reflow para reiniciar la animación
+                void span.offsetWidth;
+                span.style.animation = '';
+            });
+        });
+    }
+});
 
