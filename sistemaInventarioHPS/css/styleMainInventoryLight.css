@@ -60,7 +60,7 @@ i {
     padding-right: 0;
     border: none;
     cursor: pointer;
-    height: 50px;
+    height: 3em; /* 50px por predeterminado*/
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 5px;
 }
@@ -87,6 +87,7 @@ i {
 }
 
 #btnPerfil{
+    height: 11em;
 }
 
 
