@@ -54,3 +54,22 @@ window.addEventListener("click", function(event) {
         cerrarModal();
     }
 });
+
+document.getElementById("btnAnadirActivo").addEventListener("click", function() {
+    document.getElementById("nombre").value = "";
+    document.getElementById("tipo").value = "";
+    document.getElementById("piso").value = "";
+    document.getElementById("area").value = "";
+    document.getElementById("fabricante").value = "";
+    document.getElementById("modelo").value = "";
+    document.getElementById("numeroSerie").value = "";
+
+    // Limpia también los datos almacenados en sessionStorage
+    sessionStorage.removeItem("nombre");
+    sessionStorage.removeItem("tipo");
+    sessionStorage.removeItem("piso");
+    sessionStorage.removeItem("area");
+    sessionStorage.removeItem("fabricante");
+    sessionStorage.removeItem("modelo");
+    sessionStorage.removeItem("numeroSerie");
+});
