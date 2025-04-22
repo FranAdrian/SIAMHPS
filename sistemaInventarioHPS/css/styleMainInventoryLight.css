@@ -12,7 +12,7 @@ i {
     color: rgb(255, 255, 255);
     height: auto;
     width: auto;
-    font-size: 18px;
+    font-size: ñ;
     margin-right: 1vb;
     margin-left: 1vb;
     display: block;
@@ -80,7 +80,7 @@ i {
     height: auto;
     width: auto;
     color: rgb(26, 96, 225);
-    font-size: 3vb;
+    font-size: 23px;/* 3vb por predeterminado*/
     margin-right: 2.5vb;
     margin-left: 2.5vb;
     align-self: center;
@@ -109,17 +109,100 @@ i {
     color: white;
 }
 
-
-/*------------ Tabla -------------*/
+/* ---------Contenedor principal---------- */
 .mainContainer {
     width: 80%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
     margin-top: 1vh;
     margin-right: 1vh;
     margin-left: auto;
 }
 
+/* ---------Contenedor de filtrado de datos---------- */
+.filterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 40%; 
+    max-width: 80%; 
+    position: relative; 
+    z-index: 1;
+    background-color: rgb(255, 255, 255); 
+    padding: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+}
+
+.filterContainer input[type="text"] {
+    width: 100%;
+    max-width: 200px; 
+    padding: 8px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 14px;
+    margin-right: 0px; 
+    background-color: rgb(243, 247, 254); 
+    box-shadow: inset 0 2px 4px rgba(22, 52, 150, 0.2); 
+}
+
+
+
+.filterContainer select {
+    width: 100%;
+    max-width: 150px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-right: 0px;
+    background-color: rgb(243, 247, 254);
+    box-shadow: 0 4px 8px rgba(22, 52, 150, 0.2);
+    color: rgb(26, 96, 225);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.filterContainer select:hover {
+    background-color: rgb(227, 237, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filterContainer select:focus {
+    background-color: rgb(227, 237, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filterContainer select option {
+    background-color: rgb(255, 255, 255);
+    color: rgb(26, 96, 225);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.filterContainer button {
+    height: auto;
+    width: auto;
+    color: white;
+    font-size: 23px; /* 3vb por predeterminado */
+    margin-right: 0px;
+    margin-left: 0px;
+    align-self: center;
+    background-color: rgb(225, 26, 26);
+    border: none;
+    border-radius: 8px;
+}
+.filterContainer button:hover {
+    background-color: rgb(216, 0, 0)ñ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+/*------------ Tabla -------------*/
 table {
     width: 100%;
     border-collapse: separate;
@@ -128,7 +211,7 @@ table {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: default;
-    table-layout: fixed; /* Asegura que todas las columnas tengan la misma longitud */
+    table-layout: fixed;
 }
 
 thead tr {

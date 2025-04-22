@@ -2,17 +2,18 @@ body {
     background-color: rgb(23, 23, 26);
 }
 
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
+
 li {
     display: inline;
     margin-right: 10px;
 }
+
 a {
     text-decoration: none;
     color: rgb(11, 194, 255);
@@ -21,7 +22,6 @@ a {
 
 a:hover {
     color: rgb(0, 153, 209);
-
 }
 
 h1 {

@@ -13,6 +13,30 @@
 
     <div class="mainContainer">
 
+        <!-------- Filtrado de datos-------->
+        <div class="filterContainer">
+            <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterTable()">
+
+            <select title="filtrar" id="filterColumn" onchange="filterTable()">
+            <option value="0">Nombre</option>
+            <option value="1">Tipo</option>
+            <option value="2">Piso</option>
+            <option value="3">Area</option>
+            <option value="4">Fabricante</option>
+            <option value="5">Modelo</option>
+            <option value="6">Numero de serie</option>
+            <option value="7">Tiempo activo</option>
+            <option value="8">Estatus</option>
+            </select>
+
+            <button id="clearInput" onclick="clearSearchInput()" title="Limpiar búsqueda">
+                <i class="fa-solid fa-times"></i>
+                </button>
+        </div>
+
+
+        <!-------- Tabla de activos -------->
+
         <table>
             <thead>
                 <tr>

@@ -116,3 +116,26 @@ rows.forEach(row => {
     }
 });
 
+//----------BUSCADOR DE TABLA-------------------
+// Añade un campo de búsqueda para filtrar los resultados de la tabla.
+
+function filterTable() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const filterColumn = document.getElementById('filterColumn').value;
+    const table = document.querySelector('table tbody');
+    const rows = table.getElementsByTagName('tr');
+
+    for (let i = 0; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName('td');
+        if (cells[filterColumn]) {
+            const cellValue = cells[filterColumn].textContent || cells[filterColumn].innerText;
+            rows[i].style.display = cellValue.toLowerCase().includes(input) ? '' : 'none';
+        }
+    }
+}
+
+function clearSearchInput() {
+    document.getElementById('searchInput').value = '';
+    filterTable();
+    }
+
