@@ -24,3 +24,24 @@ document.getElementById('submitRegisterButton').addEventListener('click', functi
         window.location.href = 'main_Inventory.html';
     }
 });
+
+//Script para expresion regular de correo electronico, si no es correcto se pone rojo
+document.getElementById('inputMail').addEventListener('input', function() {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const mailInput = document.getElementById('inputMail');
+    const errorMailMessage = document.getElementById('errorMailMessage');
+    
+    if (mailInput.value === '') {
+        mailInput.classList.remove('error');
+        errorMailMessage.style.display = 'none'; // Ocultar el mensaje de error si está vacío
+    } else if (!emailRegex.test(mailInput.value)) {
+        mailInput.classList.add('error');
+        errorMailMessage.style.display = 'block'; // Mostrar el mensaje de error
+    } else {
+        mailInput.classList.remove('error');
+        errorMailMessage.style.display = 'none'; // Ocultar el mensaje de error
+    }
+});
+
+// Asegura de que el mensaje de error esté desactivado inicialmente
+document.getElementById('errorMailMessage').style.display = 'none';

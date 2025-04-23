@@ -2,17 +2,6 @@ body {
     background-color: rgb(245, 245, 245);
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-li {
-    display: inline;
-    margin-right: 10px;
-}
 
 a {
     text-decoration: none;
@@ -64,6 +53,23 @@ p {
     background: rgb(245, 245, 245);
     box-shadow: 15px 15px 30px rgb(200, 200, 200),
                -15px -15px 30px rgba(255, 255, 255, 0.2);
+}
+
+#textMail {
+    color: rgb(133, 133, 133);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    width: auto;
+    display: inline-block;
+    /* float: left; */
+}
+
+#errorMailMessage {
+    color: rgb(223, 32, 32);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+    width: auto;
+    float: right;
 }
 
 button {
