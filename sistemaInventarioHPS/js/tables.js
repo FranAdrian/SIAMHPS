@@ -22,6 +22,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+/*
 // Permite editar el contenido de las celdas de la tabla al hacer doble clic sobre ellas.
 // Al hacer doble clic sobre una celda, se convierte en un input de tipo texto.
 bodyCells.forEach(cell => {
@@ -45,6 +46,7 @@ bodyCells.forEach(cell => {
         });
     });
 });
+*/
 
 // Cambia el color de fondo de las filas pares e impares de la tabla.
 // Las filas pares tendrán un color más claro y las impares un color más oscuro.
@@ -116,7 +118,7 @@ rows.forEach(row => {
     }
 });
 
-//----------BUSCADOR DE TABLA-------------------
+//--------------BUSCADOR DE TABLA-------------------
 // Añade un campo de búsqueda para filtrar los resultados de la tabla.
 
 function filterTable() {
