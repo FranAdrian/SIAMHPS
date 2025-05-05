@@ -4,10 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configuración</title>
+    <link rel="stylesheet" href="css/styleMainInventoryLight.css">
 </head>
 <body>
 
     <div id="navbar"></div>
+
+    <div class="mainContainer">
+        <!-- Gestión de cuentas de usuario -->
+        <section>
+            <h2>Gestión de Cuentas de Usuario</h2>
+            <button id="btnCrearCuenta">Crear Cuenta</button>
+            <button id="btnEditarCuenta">Editar Cuenta</button>
+            <button id="btnEliminarCuenta">Eliminar Cuenta</button>
+        </section>
+
+        <!-- Asignación de roles -->
+        <section>
+            <h2>Asignación de Roles</h2>
+            <select title="Seleccionar Roles" id="selectRoles">
+                <option value="admin">Administrador</option>
+                <option value="tecnico">Técnico</option>
+                <option value="supervisor">Supervisor</option>
+            </select>
+            <button id="btnAsignarRol">Asignar Rol</button>
+        </section>
+
+        <!-- Control de acceso -->
+        <section>
+            <h2>Control de Acceso</h2>
+            <button id="btnConfigurarAcceso">Configurar Acceso</button>
+        </section>
+
+        <!-- Configuración de unidades de medida -->
+        <section>
+            <h2>Unidades de Medida</h2>
+            <input type="text" id="inputUnidadMedida" placeholder="Agregar unidad (kg, litros, etc.)">
+            <button id="btnAgregarUnidad">Agregar Unidad</button>
+        </section>
+
+        <!-- Categorías y subcategorías -->
+        <section>
+            <h2>Categorías y Subcategorías</h2>
+            <input type="text" id="inputCategoria" placeholder="Nueva Categoría">
+            <input type="text" id="inputSubcategoria" placeholder="Nueva Subcategoría">
+            <button id="btnAgregarCategoria">Agregar</button>
+        </section>
+
+        <!-- Personalización de estados -->
+        <section>
+            <h2>Estados del Inventario</h2>
+            <input type="text" id="inputEstado" placeholder="Nuevo Estado (en uso, mantenimiento, etc.)">
+            <button id="btnAgregarEstado">Agregar Estado</button>
+        </section>
+
+        <!-- Configuración de alertas -->
+        <section>
+            <h2>Alertas Automáticas</h2>
+            <label>
+                <input type="checkbox" id="chkAlertasCorreo"> Activar alertas por correo
+            </label>
+            <label>
+                <input type="checkbox" id="chkAlertasSistema"> Activar alertas en el sistema
+            </label>
+        </section>
+
+        <!-- Configuración de umbrales -->
+        <section>
+            <h2>Umbrales de Alertas</h2>
+            <input type="number" id="inputUmbralDias" placeholder="Días para alerta de vencimiento">
+            <button id="btnConfigurarUmbral">Configurar Umbral</button>
+        </section>
+
+        <!-- Frecuencia de mantenimiento -->
+        <section>
+            <h2>Frecuencia de Mantenimiento</h2>
+            <input type="text" id="inputTipoActivo" placeholder="Tipo de Activo">
+            <input type="number" id="inputFrecuenciaMantenimiento" placeholder="Frecuencia (días)">
+            <button id="btnConfigurarFrecuencia">Configurar Frecuencia</button>
+        </section>
+
+        <!-- Checklists de mantenimiento -->
+        <section>
+            <h2>Checklists de Mantenimiento</h2>
+            <textarea id="textareaChecklist" placeholder="Escribe el checklist aquí..."></textarea>
+            <button id="btnGuardarChecklist">Guardar Checklist</button>
+        </section>
+
+        <!-- Exportar datos -->
+        <section>
+            <h2>Exportar Datos</h2>
+            <button id="btnExportarCSV">Exportar CSV</button>
+            <button id="btnExportarExcel">Exportar Excel</button>
+            <button id="btnExportarJSON">Exportar JSON</button>
+        </section>
+
+        <!-- Cargar respaldos -->
+        <section>
+            <h2>Cargar Respaldos</h2>
+            <input title="Cargar Respaldo anterior" type="file" id="inputCargarRespaldo">
+            <button id="btnCargarRespaldo">Cargar Respaldo</button>
+        </section>
+
+        <!-- Selección de idioma -->
+        <section>
+            <h2>Idioma de la Interfaz</h2>
+            <select title="seleccionar idioma" id="selectIdioma">
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+            </select>
+        </section>
+
+        <!-- Formato de fecha y hora -->
+        <section>
+            <h2>Formato de Fecha y Hora</h2>
+            <select title="seleccionar formato de fecha" id="selectFormatoFecha">
+                <option value="dd/mm/yyyy">DD/MM/AAAA</option>
+                <option value="mm/dd/yyyy">MM/DD/AAAA</option>
+            </select>
+        </section>
+
+        <!-- Registro de cambios -->
+        <section>
+            <h2>Registro de Cambios</h2>
+            <label>
+                <input type="checkbox" id="chkRegistroCambios"> Activar registro de cambios
+            </label>
+        </section>
+
+        <!-- Historial de actividad -->
+        <section>
+            <h2>Historial de Actividad</h2>
+            <button id="btnVerHistorial">Ver Historial</button>
+        </section>
+    </div>
 
     <script src="js/navbar.js"></script>
     
