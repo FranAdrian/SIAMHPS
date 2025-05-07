@@ -21,7 +21,7 @@ document.getElementById('submitRegisterButton').addEventListener('click', functi
     });
 
     if (inputs.every(input => input.value !== '')) {
-        window.location.href = 'main_Inventory.html';
+        window.location.href = 'user_Selection.html';
     }
 });
 

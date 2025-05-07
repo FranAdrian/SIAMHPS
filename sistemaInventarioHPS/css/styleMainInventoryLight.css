@@ -51,8 +51,6 @@ p {
     color: rgb(2, 51, 141);
 }
 
-
-
 #questionRegister{
     text-align: center;
 }
@@ -359,6 +357,11 @@ p {
     text-align: center; 
     color: white;
     vertical-align: top; /* Asegura que se alineen correctamente en línea */
+}
+
+.mainContainer section button:hover {
+    background: rgb(26, 76, 205);
+    color: rgb(255, 255, 255);
 }
 
 /* Inputs y select adaptados */

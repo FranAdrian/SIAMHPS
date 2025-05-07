@@ -19,7 +19,7 @@ document.getElementById('submitLoginButton').addEventListener('click', function(
     }
 
     if (inputUser.value !== '' && inputPassword.value !== '') {
-        window.location.href = 'main_Inventory.html';
+        window.location.href = 'user_Selection.html';
     }
     
 });
