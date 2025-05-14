@@ -5,141 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configuración</title>
     <link rel="stylesheet" href="css/styleMainInventoryLight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <div id="navbar"></div>
 
     <div class="mainContainer">
-        <!-- Gestión de cuentas de usuario -->
-        <section>
-            <h2>Gestión de Cuentas de Usuario</h2>
-            <button id="btnCrearCuenta">Crear Cuenta</button>
-            <button id="btnEditarCuenta">Editar Cuenta</button>
-            <button id="btnEliminarCuenta">Eliminar Cuenta</button>
-        </section>
 
-        <!-- Asignación de roles -->
-        <section>
-            <h2>Asignación de Roles</h2>
-            <select title="Seleccionar Roles" id="selectRoles">
-                <option value="admin">Administrador</option>
-                <option value="tecnico">Técnico</option>
-                <option value="supervisor">Supervisor</option>
-            </select>
-            <button id="btnAsignarRol">Asignar Rol</button>
-        </section>
+        <div class="profileSection">
+            <div class="profileImageContainer">
+                <img src="img/default-profile.png" alt="Imagen de perfil" class="profileImage">
+            </div>
+            <div class="profileInfo">
+                <h2 class="profileFullName">Francisco Adrian</h2>
+                <p class="profileUsername">@FranAdrZazu</p>
+                <p class="profileEmail">adrian@ejemplo.com</p>
+                <p class="profileRole">Rol: Administrador</p>
+                <p class="profileLastLogin">Último acceso: 2024-06-01 14:23</p>
+            </div>
+        </div>
 
-        <!-- Control de acceso -->
-        <section>
-            <h2>Control de Acceso</h2>
-            <button id="btnConfigurarAcceso">Configurar Acceso</button>
-        </section>
+        <hr style="border: none; border-top: 1px solid #2196f3; margin: 24px 0;">
 
-        <!-- Configuración de unidades de medida -->
-        <section>
-            <h2>Unidades de Medida</h2>
-            <input type="text" id="inputUnidadMedida" placeholder="Agregar unidad (kg, litros, etc.)">
-            <button id="btnAgregarUnidad">Agregar Unidad</button>
-        </section>
-
-        <!-- Categorías y subcategorías -->
-        <section>
-            <h2>Categorías y Subcategorías</h2>
-            <input type="text" id="inputCategoria" placeholder="Nueva Categoría">
-            <input type="text" id="inputSubcategoria" placeholder="Nueva Subcategoría">
-            <button id="btnAgregarCategoria">Agregar</button>
-        </section>
-
-        <!-- Personalización de estados -->
-        <section>
-            <h2>Estados del Inventario</h2>
-            <input type="text" id="inputEstado" placeholder="Nuevo Estado (en uso, mantenimiento, etc.)">
-            <button id="btnAgregarEstado">Agregar Estado</button>
-        </section>
-
-        <!-- Configuración de alertas -->
-        <section>
-            <h2>Alertas Automáticas</h2>
-            <label>
-                <input type="checkbox" id="chkAlertasCorreo"> Activar alertas por correo
-            </label>
-            <label>
-                <input type="checkbox" id="chkAlertasSistema"> Activar alertas en el sistema
-            </label>
-        </section>
-
-        <!-- Configuración de umbrales -->
-        <section>
-            <h2>Umbrales de Alertas</h2>
-            <input type="number" id="inputUmbralDias" placeholder="Días para alerta de vencimiento">
-            <button id="btnConfigurarUmbral">Configurar Umbral</button>
-        </section>
-
-        <!-- Frecuencia de mantenimiento -->
-        <section>
-            <h2>Frecuencia de Mantenimiento</h2>
-            <input type="text" id="inputTipoActivo" placeholder="Tipo de Activo">
-            <input type="number" id="inputFrecuenciaMantenimiento" placeholder="Frecuencia (días)">
-            <button id="btnConfigurarFrecuencia">Configurar Frecuencia</button>
-        </section>
-
-        <!-- Checklists de mantenimiento -->
-        <section>
-            <h2>Checklists de Mantenimiento</h2>
-            <textarea id="textareaChecklist" placeholder="Escribe el checklist aquí..."></textarea>
-            <button id="btnGuardarChecklist">Guardar Checklist</button>
-        </section>
-
-        <!-- Exportar datos -->
-        <section>
-            <h2>Exportar Datos</h2>
-            <button id="btnExportarCSV">Exportar CSV</button>
-            <button id="btnExportarExcel">Exportar Excel</button>
-            <button id="btnExportarJSON">Exportar JSON</button>
-        </section>
-
-        <!-- Cargar respaldos -->
-        <section>
-            <h2>Cargar Respaldos</h2>
-            <input title="Cargar Respaldo anterior" type="file" id="inputCargarRespaldo">
-            <button id="btnCargarRespaldo">Cargar Respaldo</button>
-        </section>
-
-        <!-- Selección de idioma -->
-        <section>
-            <h2>Idioma de la Interfaz</h2>
-            <select title="seleccionar idioma" id="selectIdioma">
-                <option value="es">Español</option>
-                <option value="en">Inglés</option>
-            </select>
-        </section>
-
-        <!-- Formato de fecha y hora -->
-        <section>
-            <h2>Formato de Fecha y Hora</h2>
-            <select title="seleccionar formato de fecha" id="selectFormatoFecha">
-                <option value="dd/mm/yyyy">DD/MM/AAAA</option>
-                <option value="mm/dd/yyyy">MM/DD/AAAA</option>
-            </select>
-        </section>
-
-        <!-- Registro de cambios -->
-        <section>
-            <h2>Registro de Cambios</h2>
-            <label>
-                <input type="checkbox" id="chkRegistroCambios"> Activar registro de cambios
-            </label>
-        </section>
-
-        <!-- Historial de actividad -->
-        <section>
-            <h2>Historial de Actividad</h2>
-            <button id="btnVerHistorial">Ver Historial</button>
-        </section>
+        <nav class="configMenu">
+            <button class="active" data-section="usuarios"><i class="fas fa-user"></i> Cuentas de Usuario</button>
+            <button data-section="roles"><i class="fas fa-user-shield"></i> Roles y Acceso</button>
+            <button data-section="unidades"><i class="fas fa-balance-scale"></i> Unidades de Medida</button>
+            <button data-section="categorias"><i class="fas fa-tags"></i> Categorías</button>
+            <button data-section="estados"><i class="fas fa-clipboard-check"></i> Estados</button>
+            <button data-section="alertas"><i class="fas fa-bell"></i> Alertas</button>
+            <button data-section="umbral"><i class="fas fa-exclamation-triangle"></i> Umbrales</button>
+            <button data-section="mantenimiento"><i class="fas fa-tools"></i> Mantenimiento</button>
+            <button data-section="checklists"><i class="fas fa-list-check"></i> Checklists</button>
+            <button data-section="exportar"><i class="fas fa-file-export"></i> Exportar</button>
+            <button data-section="respaldos"><i class="fas fa-database"></i> Respaldos</button>
+            <button data-section="idioma"><i class="fas fa-language"></i> Idioma</button>
+            <button data-section="fecha"><i class="fas fa-calendar-alt"></i> Fecha y Hora</button>
+            <button data-section="registro"><i class="fas fa-history"></i> Registro de Cambios</button>
+            <button data-section="historial"><i class="fas fa-clipboard-list"></i> Historial</button>
+        </nav>
+        <div class="configContent">
+            <section class="configSection active" id="usuarios">
+                <h2>Gestión de Cuentas de Usuario</h2>
+                <button id="btnCrearCuenta">Crear Cuenta</button>
+                <button id="btnEditarCuenta">Editar Cuenta</button>
+                <button id="btnEliminarCuenta">Eliminar Cuenta</button>
+            </section>
+            <section class="configSection" id="roles">
+                <h2>Asignación de Roles</h2>
+                <select title="Seleccionar Roles" id="selectRoles">
+                    <option value="admin">Administrador</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="supervisor">Supervisor</option>
+                </select>
+                <button id="btnAsignarRol">Asignar Rol</button>
+                <h2>Control de Acceso</h2>
+                <button id="btnConfigurarAcceso">Configurar Acceso</button>
+            </section>
+            <section class="configSection" id="unidades">
+                <h2>Unidades de Medida</h2>
+                <input type="text" id="inputUnidadMedida" placeholder="Agregar unidad (kg, litros, etc.)">
+                <button id="btnAgregarUnidad">Agregar Unidad</button>
+            </section>
+            <section class="configSection" id="categorias">
+                <h2>Categorías y Subcategorías</h2>
+                <input type="text" id="inputCategoria" placeholder="Nueva Categoría">
+                <input type="text" id="inputSubcategoria" placeholder="Nueva Subcategoría">
+                <button id="btnAgregarCategoria">Agregar</button>
+            </section>
+            <section class="configSection" id="estados">
+                <h2>Estados del Inventario</h2>
+                <input type="text" id="inputEstado" placeholder="Nuevo Estado (en uso, mantenimiento, etc.)">
+                <button id="btnAgregarEstado">Agregar Estado</button>
+            </section>
+            <section class="configSection" id="alertas">
+                <h2>Alertas Automáticas</h2>
+                <label>
+                    <input type="checkbox" id="chkAlertasCorreo"> Activar alertas por correo
+                </label>
+                <label>
+                    <input type="checkbox" id="chkAlertasSistema"> Activar alertas en el sistema
+                </label>
+            </section>
+            <section class="configSection" id="umbral">
+                <h2>Umbrales de Alertas</h2>
+                <input type="number" id="inputUmbralDias" placeholder="Días para alerta de vencimiento">
+                <button id="btnConfigurarUmbral">Configurar Umbral</button>
+            </section>
+            <section class="configSection" id="mantenimiento">
+                <h2>Frecuencia de Mantenimiento</h2>
+                <input type="text" id="inputTipoActivo" placeholder="Tipo de Activo">
+                <input type="number" id="inputFrecuenciaMantenimiento" placeholder="Frecuencia (días)">
+                <button id="btnConfigurarFrecuencia">Configurar Frecuencia</button>
+            </section>
+            <section class="configSection" id="checklists">
+                <h2>Checklists de Mantenimiento</h2>
+                <textarea id="textareaChecklist" placeholder="Escribe el checklist aquí..."></textarea>
+                <button id="btnGuardarChecklist">Guardar Checklist</button>
+            </section>
+            <section class="configSection" id="exportar">
+                <h2>Exportar Datos</h2>
+                <button id="btnExportarCSV">Exportar CSV</button>
+                <button id="btnExportarExcel">Exportar Excel</button>
+                <button id="btnExportarJSON">Exportar JSON</button>
+            </section>
+            <section class="configSection" id="respaldos">
+                <h2>Cargar Respaldos</h2>
+                <input title="Cargar Respaldo anterior" type="file" id="inputCargarRespaldo">
+                <button id="btnCargarRespaldo">Cargar Respaldo</button>
+            </section>
+            <section class="configSection" id="idioma">
+                <h2>Idioma de la Interfaz</h2>
+                <select title="seleccionar idioma" id="selectIdioma">
+                    <option value="es">Español</option>
+                    <option value="en">Inglés</option>
+                </select>
+            </section>
+            <section class="configSection" id="fecha">
+                <h2>Formato de Fecha y Hora</h2>
+                <select title="seleccionar formato de fecha" id="selectFormatoFecha">
+                    <option value="dd/mm/yyyy">DD/MM/AAAA</option>
+                    <option value="mm/dd/yyyy">MM/DD/AAAA</option>
+                </select>
+            </section>
+            <section class="configSection" id="registro">
+                <h2>Registro de Cambios</h2>
+                <label>
+                    <input type="checkbox" id="chkRegistroCambios"> Activar registro de cambios
+                </label>
+            </section>
+            <section class="configSection" id="historial">
+                <h2>Historial de Actividad</h2>
+                <button id="btnVerHistorial">Ver Historial</button>
+            </section>
+        </div>
     </div>
-
     <script src="js/navbar.js"></script>
-    
+    <script src="js/config.js"></script>
 </body>
 </html>

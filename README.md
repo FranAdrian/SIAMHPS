@@ -1,4 +1,4 @@
-# SIAMHPS
+# SIAMHPS (SISTEMA DE INVENTARIOS MÉDICOS DEL HOSPITAL PEDIÁTRICO DE SINALOA)
 
 Este proyecto es un sistema de inventario diseñado para gestionar activos, usuarios y configuraciones de manera eficiente. A continuación, se describen las funcionalidades principales y el propósito de cada archivo en la estructura del proyecto.
 

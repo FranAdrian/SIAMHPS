@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registros</title>
     <link rel="stylesheet" href="css/styleMainInventoryLight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     
@@ -12,45 +13,80 @@
 
 <div class="mainContainer">
 
-    <!-- <h1>Movimientos de Inventario</h1><br> -->
-    <div>
-        <!-- <h2>Movimientos</h2> -->
-        <table>
-            <thead>
-                <tr>
-                    <th width="15%">Fecha y hora</th>
-                    <th width="10%">Usuario</th>
-                    <th>Descripción</th>
-                </tr>
-            </thead>
-            <tbody>
-                    <tr>
-                        <td>5 de abril de 2025</td>
-                        <td>Adrian </td>
-                        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquid voluptate laboriosam eligendi repellat modi sit sunt soluta. Aperiam, exercitationem!</td>
+    <button id="toggleLayoutBtn">
+        <i class="fa-regular fa-square fa-fw"></i>
+        <i class="fa-solid fa-square-half-stroke fa-fw"></i>
+        Cambiar disposición
+    </button>
 
-                    </tr>
+    <div id="tablesWrapper" class="vertical-layout">
+        <div>
+            <h2 class="inOutTitle">Entradas</h2>
+            <table>
+                <thead>
                     <tr>
-                        <td>2 de febrero de 2025</td>
-                        <td>Jorge</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam.</td>
+                        <th width="15%">Fecha y hora</th>
+                        <th width="10%">Usuario</th>
+                        <th>Descripción</th>
                     </tr>
-                    <tr>
-                        <td>30 de enero de 2025</td>
-                        <td>Adrian</td>
-                        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perspiciatis porro, velit praesentium reiciendis magni!</td>
-                    </tr>
-                    <!-- Añadir más filas como se necesiten para ejemplos de visualización-->
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>5 de abril de 2025</td>
+                            <td>Adrian </td>
+                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquid voluptate laboriosam eligendi repellat modi sit sunt soluta. Aperiam, exercitationem!</td>
+                        </tr>
+                        <tr>
+                            <td>2 de febrero de 2025</td>
+                            <td>Jorge</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam.</td>
+                        </tr>
+                        <tr>
+                            <td>30 de enero de 2025</td>
+                            <td>Adrian</td>
+                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perspiciatis porro, velit praesentium reiciendis magni!</td>
+                        </tr>
+                        <!-- Añadir más filas como se necesiten para ejemplos de visualización-->
+                </tbody>
+            </table>
+        </div>
 
-            </tbody>
-        </table>
+        <div>
+            <h2 class="inOutTitle">Salidas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="15%">Fecha y hora</th>
+                        <th width="10%">Usuario</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>5 de abril de 2025</td>
+                            <td>Adrian </td>
+                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquid voluptate laboriosam eligendi repellat modi sit sunt soluta. Aperiam, exercitationem!</td>
+                        </tr>
+                        <tr>
+                            <td>2 de febrero de 2025</td>
+                            <td>Jorge</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam.</td>
+                        </tr>
+                        <tr>
+                            <td>30 de enero de 2025</td>
+                            <td>Adrian</td>
+                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perspiciatis porro, velit praesentium reiciendis magni!</td>
+                        </tr>
+                        <!-- Añadir más filas como se necesiten para ejemplos de visualización-->
+                </tbody>
+            </table>
+        </div>
     </div>
-
 </div>
-
 
 <script src="js/tables.js"></script>
 <script src="js/navbar.js"></script>
+<script src="js/logs.js"></script>
 
 </body>
 </html>

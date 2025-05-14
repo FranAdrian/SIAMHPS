@@ -12,7 +12,6 @@ i {
     color: rgb(255, 255, 255);
     height: auto;
     width: auto;
-    font-size: ñ;
     margin-right: 1vb;
     margin-left: 1vb;
     display: block;
@@ -31,6 +30,15 @@ h2 {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 40px;
+}
+
+.inOutTitle {/* Título de entrada/salida*/
+    color: rgb(80, 80, 80);
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 p {
@@ -328,9 +336,9 @@ p {
     flex: 1 1 300px; /* Tamaño flexible: mínimo 300px, se adapta al contenido */
     max-width: 400px; /* Ancho máximo para evitar que se expandan demasiado */
     padding: 15px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245); /* Igual que el background general */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: none; /* Sin sombra */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -347,7 +355,7 @@ p {
     padding: 8px 15px;
     margin: 5px 5px 0 0;
     background: rgb(26, 96, 225);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -665,29 +673,264 @@ form input:focus, form select:focus {
 /* ------------Selección de usuario---------- */
 
 .userSelectionContainer {
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10% auto;
-    width: 40%;
-    max-width: 80%;
+    margin: 5% auto;
+    width: 60%;
+    max-width: 500px;
     background-color: rgb(255, 255, 255);
-    padding: 10px;
+    padding: 30px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
+.subUserSelectionContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 30px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
 .userContainer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
-    width: 20%;
+    width: 140px;
     background-color: rgb(245, 245, 245);
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
-    margin-top: 10px;
+    margin: 0;
     gap: 10px;
 }
+
+.userContainer img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userContainer p {
+    margin: 0;
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+    .userSelectionContainer {
+        width: 95%;
+        padding: 15px 5px;
+    }
+    .subUserSelectionContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .userContainer {
+        width: 90vw;
+        max-width: 300px;
+        padding: 10px 0;
+    }
+}
+
+/* --------------- Configuración ---------------- */
+
+/* --- Estilos para la sección de perfil en configuración --- */
+.profileSection {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* background: #f8f9fa; */
+    border-radius: 10px;
+    margin-bottom: 24px;
+    padding: 18px 2px 0px 0px;
+    box-sizing: border-box;
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.04); */
+}
+
+.profileImageContainer {
+    flex-shrink: 0;
+}
+.profileImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.profileInfo {
+    margin-left: 24px;
+}
+
+.profileFullName {
+    margin: 0 0 4px 0;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.profileUsername,
+.profileEmail,
+.profileRole,
+.profileLastLogin {
+    margin: 2px 0;
+    color: #555;
+    font-size: 1em;
+}
+
+@media (max-width: 600px) {
+    .profileSection {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+    }
+    .profileInfo {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+}
+
+.configMenu {
+    width: 240px;
+    min-width: 140px;
+    background: rgb(245, 245, 245); /* Cambiado para igualar el background */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.08); */ /* Quitada la sombra */
+    padding: 10px 0;
+    margin-right: 0;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.configMenu i{
+    color: rgb(95, 138, 219);
+}
+
+.configMenu button {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 6px 20px;
+    font-size: 16px;
+    color: #1a60e1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border-radius: 8px; /* Redondeado */
+    transition: background 0.2s, color 0.2s;
+}
+
+.configMenu button.active {
+    background: #e3edff;
+    color: #174ea6;
+    font-weight: bold;
+    border-radius: 8px; /* Redondeado */
+}
+
+.configMenu button.active i {
+    color: #174ea6;
+}
+
+.configMenu button:hover:not(.active) {
+    background: #ededed; /* Gris claro */
+    color: #174ea6;
+    border-radius: 8px; /* Redondeado */
+}
+
+/* .configMenu button:hover:not(.active) i {
+    color: #174ea6;
+} */
+
+.configContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.configSection {
+    display: none;
+    background: #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.08); */ /* Quitada la sombra */
+    padding: 24px 32px;
+    margin: 0;
+}
+
+.configSection.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        flex-direction: column;
+    }
+    .configMenu {
+        flex-direction: row;
+        width: 100%;
+        min-width: unset;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        /* box-shadow: 0 2px 4px rgba(0,0,0,0.08); */ /* Quitada la sombra */
+        overflow-x: auto;
+        gap: 0;
+        background: rgb(245, 245, 245); /* También aquí para móviles */
+    }
+    .configMenu button {
+        min-width: 120px;
+        font-size: 14px;
+        padding: 10px 10px;
+        border-radius: 8px; /* Redondeado */
+        border-right: 1px solid #e3edff;
+    }
+    .configMenu button:last-child {
+        border-right: none;
+    }
+    .configSection {
+        padding: 16px 8px;
+    }
+}
+
+/* --- Layout de logs: vertical/horizontal --- */
+#toggleLayoutBtn{
+    background: rgb(26, 96, 225);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px auto;
+    text-align: center;
+    display: block;
+    width: auto;
+}
+
+.vertical-layout {
+    display: block;
+}
+.horizontal-layout {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.horizontal-layout > div {
+    flex: 1 1 0;
+    min-width: 300px;
+}
+
+
