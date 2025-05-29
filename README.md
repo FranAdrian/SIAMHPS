@@ -8,48 +8,54 @@ Este proyecto es un sistema de inventario diseñado para gestionar activos, usua
 
 1. **Inicio de Sesión y Registro**: Permite a los usuarios iniciar sesión o registrarse en el sistema.
 2. **Gestión de Inventario**: Visualización, filtrado y gestión de activos en el inventario.
-3. **Configuración del Sistema**: Personalización de roles, alertas, unidades de medida, y más.
-4. **Registros de Actividad**: Visualización de logs de movimientos y cambios en el sistema.
-5. **Selección de Usuario**: Interfaz para elegir el usuario que usará el sistema.
-6. **Modal de Entrada de Activos**: Formulario para añadir nuevos activos al inventario desde la página principal de inventario.
+3. **Configuración del Sistema**: Personalización de roles, alertas, unidades de medida, categorías, estados, idioma, respaldos y más.
+4. **Registros de Actividad**: Visualización de logs de movimientos y cambios en el sistema, con exportación e impresión.
+5. **Selección de Usuario**: Interfaz para elegir el usuario que usará el sistema, mostrando si es administrador.
+6. **Modal de Entrada de Activos**: Formulario modal para añadir nuevos activos al inventario desde la página principal.
+7. **Navegación Dinámica**: Barra lateral de navegación cargada dinámicamente y resaltado de la página activa.
 
 ---
 
 ## Descripción de Archivos
 
 ### **HTML**
-- **`index.html`**: Página principal para el inicio de sesión. Contiene un formulario para ingresar usuario y contraseña.  
-- **`register.html`**: Página de registro de nuevos usuarios. Incluye validación de campos y un enlace para volver al inicio de sesión.  
-- **`main_Inventory.html`**: Página principal del inventario. Muestra una tabla con los activos y permite filtrarlos por diferentes criterios.  
-- **`config_Inventory.html`**: Página de configuración del sistema. Permite gestionar usuarios, roles, alertas, unidades de medida, y más.  
-- **`logs_Inventory.html`**: Página de registros. Muestra un historial de movimientos y cambios realizados en el sistema.  
-- **`profile_Inventory.html`**: Página del perfil del usuario. Muestra información del usuario activo.  
-- **`user_Selection.html`**: Página para seleccionar el usuario activo.  
-- **`new_Input_Modal.html`**: Modal para añadir nuevos activos al inventario desde la página principal de inventario.  
+- **`index.html`**: Página principal para el inicio de sesión.
+- **`register.html`**: Página de registro de nuevos usuarios, con validación de campos y correo.
+- **`main_Inventory.html`**: Página principal del inventario, con tabla de activos y filtrado.
+- **`config_Inventory.html`**: Página de configuración avanzada del sistema (usuarios, roles, unidades, categorías, alertas, respaldos, etc.).
+- **`logs_Inventory.html`**: Página de registros, muestra historial de movimientos, detalles y permite exportar o imprimir.
+- **`profile_Inventory.html`**: Página del perfil del usuario activo.
+- **`user_Selection.html`**: Página para seleccionar el usuario activo, mostrando si es administrador.
+- **`new_Input_Modal.html`**: Modal para añadir nuevos activos al inventario.
 
 ### **CSS**
-- **`styleMainInventoryLight.css`**: Estilo específico para las páginas relacionadas con el inventario en tema claro.  
+- **`css/styleMainInventoryLight.css`**: Estilo específico para las páginas relacionadas con el inventario en tema claro, incluyendo estilos para formularios, tablas, navbar, modales y selección de usuario.
 
 ### **JavaScript**
-- **`login.js`**: Maneja la validación del formulario de inicio de sesión y redirige al usuario a la página de selección de usuario.  
-- **`register.js`**: Valida los campos del formulario de registro, incluyendo la validación del correo electrónico.  
-- **`navbar.js`**: Carga dinámicamente la barra de navegación desde un archivo externo y resalta la página activa.  
-- **`tables.js`**: Añade funcionalidades a las tablas, como resaltado de celdas vacías, animación de texto desbordado y filtrado de datos.  
-- **`new_Input_Modal.js`**: Controla la apertura, cierre y funcionalidad del modal para añadir nuevos activos desde la página principal de inventario.  
+- **`js/login.js`**: Valida el formulario de inicio de sesión y redirige a la selección de usuario.
+- **`js/register.js`**: Valida los campos del formulario de registro, incluyendo correo electrónico.
+- **`js/navbar.js`**: Carga dinámicamente la barra de navegación desde [`navbar.html`](sistemaInventarioHPS/navbar.html) y resalta la página activa.
+- **`js/tables.js`**: Añade funcionalidades a las tablas: resaltado de celdas vacías, animación de texto desbordado y filtrado de datos.
+- **`js/new_Input_Modal.js`**: Controla la apertura, cierre y funcionalidad del modal para añadir nuevos activos, guardando datos temporalmente.
+- **`js/users.js`**: Genera dinámicamente la lista de usuarios en la selección de usuario, mostrando si son administradores.
+- **`js/config.js`**: Controla la navegación entre secciones de la página de configuración.
+- **`js/measure_Units.js`**: Carga las unidades de medida disponibles en la sección de configuración.
+- **`js/logs.js`**: Permite alternar la disposición de las tablas de logs entre vertical y horizontal.
 
 ### **Otros**
-- **`navbar.html`**: Contiene la estructura de la barra de navegación utilizada en todas las páginas.  
-- **`.hintrc`**: Archivo de configuración para herramientas de desarrollo.  
+- **`navbar.html`**: Contiene la estructura de la barra de navegación utilizada en todas las páginas.
+- **`.hintrc`**: Archivo de configuración para herramientas de desarrollo.
 
 ---
 
 ## Cómo Usar
 
-1. **Inicio de Sesión**: Accede a `index.html` para iniciar sesión. Si no tienes una cuenta, regístrate en `register.html`.  
-2. **Gestión de Inventario**: Una vez dentro, navega a `main_Inventory.html` para gestionar los activos.  
-3. **Configuración**: Personaliza el sistema desde `config_Inventory.html`.  
-4. **Registros**: Consulta los movimientos y cambios en `logs_Inventory.html`.  
-5. **Añadir Activos**: Usa el botón en `main_Inventory.html` para abrir el modal y añadir nuevos activos desde la página principal de inventario.  
+1. **Inicio de Sesión**: Accede a `index.html` para iniciar sesión. Si no tienes una cuenta, regístrate en `register.html`.
+2. **Selección de Usuario**: Tras iniciar sesión, elige el usuario activo en `user_Selection.html`.
+3. **Gestión de Inventario**: Navega a `main_Inventory.html` para gestionar los activos.
+4. **Configuración**: Personaliza el sistema desde `config_Inventory.html`.
+5. **Registros**: Consulta los movimientos y cambios en `logs_Inventory.html`, con opción de exportar o imprimir.
+6. **Añadir Activos**: Usa el botón en `main_Inventory.html` para abrir el modal y añadir nuevos activos.
 
 ---
 

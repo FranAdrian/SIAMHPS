@@ -1,0 +1,32 @@
+[
+    {
+        "nombre": "Adrian",
+        "apellidos": "García López",
+        "fecha_nacimiento": "1990-05-12",
+        "curp": "GALP900512HDFRPD01",
+        "correo_electronico": "adrian.garcia@example.com",
+        "activo": true,
+        "rol": "Administrador",
+        "avatar": "img/default-profile.png"
+    },
+    {
+        "nombre": "María",
+        "apellidos": "Pérez Sánchez",
+        "fecha_nacimiento": "1988-09-23",
+        "curp": "PESM880923MDFRRL02",
+        "correo_electronico": "maria.perez@example.com",
+        "activo": true,
+        "rol": "Técnico",
+        "avatar": "img/default-profile.png"
+    },
+    {
+        "nombre": "Luis",
+        "apellidos": "Hernández Ruiz",
+        "fecha_nacimiento": "1985-03-17",
+        "curp": "HERL850317HDFRNZ03",
+        "correo_electronico": "luis.hernandez@example.com",
+        "activo": false,
+        "rol": "Supervisor",
+        "avatar": "img/default-profile.png"
+    }
+]

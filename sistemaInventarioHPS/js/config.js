@@ -1,4 +1,4 @@
-        // Cambia la sección visible al hacer clic en el menú
+        // Cambia la sección visible al hacer clic en el menú de configuración
         document.querySelectorAll('.configMenu button').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.configMenu button').forEach(b => b.classList.remove('active'));

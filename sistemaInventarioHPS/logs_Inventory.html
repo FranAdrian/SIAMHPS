@@ -13,15 +13,99 @@
 
 <div class="mainContainer">
 
-    <button id="toggleLayoutBtn">
-        <i class="fa-regular fa-square fa-fw"></i>
-        <i class="fa-solid fa-square-half-stroke fa-fw"></i>
-        Cambiar disposición
-    </button>
+    <!-- Apartado: Eventos ordenados por fecha y hora exactas -->
+    <div class="events-section">
+        <h2>Todos los eventos (ordenados por fecha y hora)</h2>
+        <table id="eventsTable">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Fecha y hora</th>
+                    <th>Usuario</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Activo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de fila de evento -->
+                <tr class="event-row entrada" data-event='{"tipo":"entrada","fecha":"2025-04-05 10:00","usuario":"Adrian","descripcion":"Ingreso de monitor","cantidad":2,"motivo":"Revisión técnica","activo":"MON-001","estadoAntes":"Disponible","estadoDespues":"En revisión"}'>
+                    <td><i class="fa-solid fa-arrow-down text-green"></i> Entrada</td>
+                    <td>5/4/2025 10:00</td>
+                    <td>Adrian</td>
+                    <td>Ingreso de monitor</td>
+                    <td>2</td>
+                    <td>MON-001</td>
+                    <td><button class="detailsBtn">Detalles</button></td>
+                </tr>
+                <tr class="event-row salida" data-event='{"tipo":"salida","fecha":"2025-04-05 12:00","usuario":"Jorge","descripcion":"Salida de monitor","cantidad":1,"motivo":"Entregado a quirófano","activo":"MON-001","estadoAntes":"En revisión","estadoDespues":"En uso"}'>
+                    <td><i class="fa-solid fa-arrow-up text-red"></i> Salida</td>
+                    <td>5/4/2025 12:00</td>
+                    <td>Jorge</td>
+                    <td>Salida de monitor</td>
+                    <td>1</td>
+                    <td>MON-001</td>
+                    <td><button class="detailsBtn">Detalles</button></td>
+                </tr>
+                <tr class="event-row edicion" data-event='{"tipo":"edicion","fecha":"2025-04-06 09:00","usuario":"Adrian","descripcion":"Edición de estado","cantidad":1,"motivo":"Corrección de inventario","activo":"MON-001","estadoAntes":"En uso","estadoDespues":"Disponible"}'></tr>
+                    <td><i class="fa-solid fa-pen text-blue"></i> Edición</td>
+                    <td>6/4/2025 09:00</td>
+                    <td>Adrian</td>
+                    <td>Edición de estado</td>
+                    <td>1</td>
+                    <td>MON-001</td>
+                    <td><button class="detailsBtn">Detalles</button></td>
+                </tr>
+                <!-- Más filas dinámicamente -->
+            </tbody>
+        </table>
+    </div>
 
+    <!-- Modal de detalles de evento -->
+    <div id="eventDetailsModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Detalles del evento</h3>
+            <ul>
+                <li><strong>Fecha y hora:</strong> <span id="modalFecha"></span></li>
+                <li><strong>Usuario responsable:</strong> <span id="modalUsuario"></span></li>
+                <li><strong>Descripción del activo:</strong> <span id="modalDescripcion"></span></li>
+                <li><strong>Cantidad:</strong> <span id="modalCantidad"></span></li>
+                <li><strong>Motivo o nota:</strong> <span id="modalMotivo"></span></li>
+                <li><strong>ID o código del activo:</strong> <span id="modalActivo"></span></li>
+                <li id="modalEstadoAntes"><strong>Estado antes:</strong> <span></span></li>
+                <li id="modalEstadoDespues"><strong>Estado después:</strong> <span></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Apartado: Historial por usuario -->
+    <div class="user-history-section">
+        <h2>Historial por usuario</h2>
+        <select title="seleccionar usuario" id="userSelect">
+            <option value="">Selecciona un usuario</option>
+            <option value="Adrian">Adrian</option>
+            <option value="Jorge">Jorge</option>
+            <!-- Más usuarios dinámicamente -->
+        </select>
+        <div id="userHistory">
+            <!-- Aquí se mostrará el historial del usuario seleccionado -->
+        </div>
+    </div>
+
+            <!-- Botones de acciones generales -->
+    <div class="actions-bar">
+        <button id="exportPdfBtn"><i class="fa-solid fa-file-pdf"></i> Exportar PDF</button>
+        <button id="exportExcelBtn"><i class="fa-solid fa-file-excel"></i> Exportar Excel</button>
+        <button id="exportCsvBtn"><i class="fa-solid fa-file-csv"></i> Exportar CSV</button>
+        <button id="printBtn"><i class="fa-solid fa-print"></i> Imprimir</button>
+    </div>
+
+    <!-- Apartado clásico de tablas por tipo -->
     <div id="tablesWrapper" class="vertical-layout">
         <div>
-            <h2 class="inOutTitle">Entradas</h2>
+            <h2 class="inOutTitle"><i class="fa-solid fa-arrow-down text-green"></i> Entradas</h2>
             <table>
                 <thead>
                     <tr>
@@ -31,28 +115,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                            <td>5 de abril de 2025</td>
-                            <td>Adrian </td>
-                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquid voluptate laboriosam eligendi repellat modi sit sunt soluta. Aperiam, exercitationem!</td>
-                        </tr>
-                        <tr>
-                            <td>2 de febrero de 2025</td>
-                            <td>Jorge</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam.</td>
-                        </tr>
-                        <tr>
-                            <td>30 de enero de 2025</td>
-                            <td>Adrian</td>
-                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perspiciatis porro, velit praesentium reiciendis magni!</td>
-                        </tr>
-                        <!-- Añadir más filas como se necesiten para ejemplos de visualización-->
+                    <tr>
+                        <td>5 de abril de 2025</td>
+                        <td>Adrian</td>
+                        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquid voluptate laboriosam eligendi repellat modi sit sunt soluta. Aperiam, exercitationem!</td>
+                    </tr>
+                    <tr>
+                        <td>2 de febrero de 2025</td>
+                        <td>Jorge</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam.</td>
+                    </tr>
+                    <tr>
+                        <td>30 de enero de 2025</td>
+                        <td>Adrian</td>
+                        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perspiciatis porro, velit praesentium reiciendis magni!</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
-
         <div>
-            <h2 class="inOutTitle">Salidas</h2>
+            <h2 class="inOutTitle"><i class="fa-solid fa-arrow-up text-red"></i> Salidas</h2>
             <table>
                 <thead>
                     <tr>
@@ -62,22 +144,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                            <td>5 de abril de 2025</td>
-                            <td>Adrian </td>
-                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquid voluptate laboriosam eligendi repellat modi sit sunt soluta. Aperiam, exercitationem!</td>
-                        </tr>
-                        <tr>
-                            <td>2 de febrero de 2025</td>
-                            <td>Jorge</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam.</td>
-                        </tr>
-                        <tr>
-                            <td>30 de enero de 2025</td>
-                            <td>Adrian</td>
-                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perspiciatis porro, velit praesentium reiciendis magni!</td>
-                        </tr>
-                        <!-- Añadir más filas como se necesiten para ejemplos de visualización-->
+                    <tr>
+                        <td>5 de abril de 2025</td>
+                        <td>Adrian</td>
+                        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquid voluptate laboriosam eligendi repellat modi sit sunt soluta. Aperiam, exercitationem!</td>
+                    </tr>
+                    <tr>
+                        <td>2 de febrero de 2025</td>
+                        <td>Jorge</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam.</td>
+                    </tr>
+                    <tr>
+                        <td>30 de enero de 2025</td>
+                        <td>Adrian</td>
+                        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos perspiciatis porro, velit praesentium reiciendis magni!</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
