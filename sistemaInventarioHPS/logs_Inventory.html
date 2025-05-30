@@ -62,37 +62,6 @@
         </table>
     </div>
 
-    <!-- Modal de detalles de evento -->
-    <div id="eventDetailsModal" class="modal" style="display:none;">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3>Detalles del evento</h3>
-            <ul>
-                <li><strong>Fecha y hora:</strong> <span id="modalFecha"></span></li>
-                <li><strong>Usuario responsable:</strong> <span id="modalUsuario"></span></li>
-                <li><strong>Descripción del activo:</strong> <span id="modalDescripcion"></span></li>
-                <li><strong>Cantidad:</strong> <span id="modalCantidad"></span></li>
-                <li><strong>Motivo o nota:</strong> <span id="modalMotivo"></span></li>
-                <li><strong>ID o código del activo:</strong> <span id="modalActivo"></span></li>
-                <li id="modalEstadoAntes"><strong>Estado antes:</strong> <span></span></li>
-                <li id="modalEstadoDespues"><strong>Estado después:</strong> <span></span></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Apartado: Historial por usuario -->
-    <div class="user-history-section">
-        <h2>Historial por usuario</h2>
-        <select title="seleccionar usuario" id="userSelect">
-            <option value="">Selecciona un usuario</option>
-            <option value="Adrian">Adrian</option>
-            <option value="Jorge">Jorge</option>
-            <!-- Más usuarios dinámicamente -->
-        </select>
-        <div id="userHistory">
-            <!-- Aquí se mostrará el historial del usuario seleccionado -->
-        </div>
-    </div>
 
             <!-- Botones de acciones generales -->
     <div class="actions-bar">
@@ -168,6 +137,7 @@
 <script src="js/tables.js"></script>
 <script src="js/navbar.js"></script>
 <script src="js/logs.js"></script>
+<script src="js/get_User_History.js"></script>
 
 </body>
 </html>

@@ -478,7 +478,7 @@ p {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    width: 40%;
+    width: 100%;
     max-width: 80%;
     position: relative;
     z-index: 1;
@@ -555,6 +555,37 @@ p {
 
 .filterContainer button:hover {
     background: #174ea6;
+}
+
+/* Botón verde para añadir activo nuevo en el filtro */
+#btnAdd {
+    background: rgb(30, 142, 45);
+    color: #76ea4f;
+    border: none;
+    border-radius: 999px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 22px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 42px;
+    white-space: nowrap;
+        transition: 0s;
+}
+
+#btnAdd i {
+    color: #76ea4f;
+    font-size: 1.2em;
+    margin-right: 8px;
+    transition: 0s;
+}
+
+#btnAdd:hover {
+    background: rgb(22, 113, 34);
+    color:#76ea4f;
+    transition: 0s;
 }
 
 /*----------------------- Tabla -----------------------*/
@@ -725,15 +756,15 @@ form input:focus, form select:focus {
     background: rgb(26, 96, 225);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 999px;
     cursor: pointer;
     font-size: 16px;
-    padding: 10px;
+    padding: 10px 32px; /* Más espacio a los lados */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 10px auto;
     text-align: center;
     display: block;
-    width: 50%;
+    width: auto;
     max-width: 200px;
 }
 
@@ -1314,6 +1345,8 @@ form input:focus, form select:focus {
         min-width: 100px;
     }
 }
+
+
 
 
 

@@ -43,5 +43,16 @@
         "serie": "445227",
         "tiempo": "2 meses, 4 dias",
         "estatus": "Activo"
+    },
+    {
+        "nombre": "aadsf-CC",
+        "tipo": "Monitor de signos vitales",
+        "piso": "3",
+        "area": "Mantenimiento",
+        "fabricante": "ALPINION",
+        "modelo": "EJ-3MP10",
+        "serie": "445227",
+        "tiempo": "2 meses, 4 dias",
+        "estatus": "Activo"
     }
 ]

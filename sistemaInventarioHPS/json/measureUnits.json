@@ -1,0 +1,15 @@
+[
+    { "value": "kg", "label": "Kilogramo (kg)" },
+    { "value": "g", "label": "Gramo (g)" },
+    { "value": "mg", "label": "Miligramo (mg)" },
+    { "value": "l", "label": "Litro (l)" },
+    { "value": "ml", "label": "Mililitro (ml)" },
+    { "value": "m", "label": "Metro (m)" },
+    { "value": "cm", "label": "Centímetro (cm)" },
+    { "value": "mm", "label": "Milímetro (mm)" },
+    { "value": "unidad", "label": "Unidad (u)" },
+    { "value": "paquete", "label": "Paquete" },
+    { "value": "caja", "label": "Caja" },
+    { "value": "par", "label": "Par" },
+    { "value": "docena", "label": "Docena" }
+]
