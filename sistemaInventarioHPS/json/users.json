@@ -28,5 +28,15 @@
         "activo": false,
         "rol": "Supervisor",
         "avatar": "img/default-profile.png"
+    },
+    {
+        "nombre": "Luis",
+        "apellidos": "Hernández Ruiz",
+        "fecha_nacimiento": "1985-03-17",
+        "curp": "HERL850317HDFRNZ03",
+        "correo_electronico": "luis.hernandez@example.com",
+        "activo": false,
+        "rol": "Supervisor",
+        "avatar": "img/default-profile.png"
     }
 ]

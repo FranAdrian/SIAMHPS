@@ -53,58 +53,87 @@
                 <button id="btnEliminarCuenta"><i class="fas fa-user-times"></i> Eliminar Cuenta</button>
 
                 <form id="formUsuario" class="formUsuario">
+
                     <div class="form-row">
+
                         <div class="form-group">
+
                             <label for="nombreUsuario">Nombre</label>
                             <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre(s)" required>
+
                         </div>
+
                         <div class="form-group">
+
                             <label for="apellidosUsuario">Apellidos</label>
                             <input type="text" id="apellidosUsuario" name="apellidosUsuario" placeholder="Apellidos" required>
+
                         </div>
                     </div>
+
                     <div class="form-row">
+
                         <div class="form-group">
                             <label for="fechaNacimiento">Fecha de nacimiento</label>
                             <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
                         </div>
+
                         <div class="form-group">
+
                             <label for="curpUsuario">CURP</label>
                             <input type="text" id="curpUsuario" name="curpUsuario" placeholder="CURP" maxlength="18" required>
+
                         </div>
+
                     </div>
+
                     <div class="form-row">
+
                         <div class="form-group">
+
                             <label for="correoUsuario">Correo electrónico</label>
                             <input type="email" id="correoUsuario" name="correoUsuario" placeholder="correo@ejemplo.com" required>
+
                         </div>
+
                         <div class="form-group">
+
                             <label for="telefonoUsuario">Teléfono</label>
                             <input type="tel" id="telefonoUsuario" name="telefonoUsuario" placeholder="Teléfono">
+
                         </div>
+
                     </div>
+
                     <div class="form-row">
+
                         <div class="form-group">
+
                             <label for="rolUsuario">Rol</label>
+
                             <select id="rolUsuario" name="rolUsuario" required>
-                                <option value="">Seleccionar rol</option>
-                                <option value="admin">Administrador</option>
-                                <option value="tecnico">Técnico</option>
-                                <option value="supervisor">Supervisor</option>
-                                <option value="usuario">Usuario</option>
                             </select>
+
                         </div>
+
                         <div class="form-group">
+
                             <label for="usuarioActivo">¿Activo?</label>
+
                             <select id="usuarioActivo" name="usuarioActivo" required>
                                 <option value="si">Sí</option>
                                 <option value="no">No</option>
                             </select>
+
                         </div>
+
                     </div>
+
                     <button type="submit" class="btnGuardarUsuario">
                         <i class="fas fa-save"></i> Guardar Usuario
                     </button>
+
                 </form>
 
             </section>
@@ -130,6 +159,7 @@
             <section class="configSection" id="unidades">
 
                 <h2>Unidades de Medida</h2>
+
                 <input type="text" id="inputUnidadMedida" placeholder="Agregar unidad (kg, litros, etc.)">
                 <button id="btnAgregarUnidad">Agregar Unidad</button>
 
@@ -256,5 +286,6 @@
     <script src="js/navbar.js"></script>
     <script src="js/config.js"></script>
     <script src="js/measure_Units.js"></script>
+    <script src="js/get_User_Role.js"></script>
 </body>
 </html>

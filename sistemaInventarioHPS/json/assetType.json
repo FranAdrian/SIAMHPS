@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Equipo Médico",
+        "description": "Dispositivos utilizados para diagnóstico, tratamiento y monitoreo de pacientes."
+    },
+    {
+        "id": 2,
+        "name": "Instrumental Quirúrgico",
+        "description": "Herramientas utilizadas en procedimientos quirúrgicos."
+    },
+    {
+        "id": 3,
+        "name": "Mobiliario Hospitalario",
+        "description": "Camas, mesas, sillas y otros muebles utilizados en áreas clínicas y administrativas."
+    },
+    {
+        "id": 4,
+        "name": "Sistemas de Climatización",
+        "description": "Equipos de aire acondicionado, calefacción y ventilación."
+    },
+    {
+        "id": 5,
+        "name": "Sistemas Eléctricos",
+        "description": "Paneles eléctricos, generadores y sistemas de respaldo de energía."
+    },
+    {
+        "id": 6,
+        "name": "Sistemas de Plomería",
+        "description": "Tuberías, bombas de agua y sistemas de drenaje."
+    },
+    {
+        "id": 7,
+        "name": "Equipos de Imagenología",
+        "description": "Rayos X, tomógrafos, resonancias magnéticas y ultrasonidos."
+    },
+    {
+        "id": 8,
+        "name": "Equipos de Laboratorio",
+        "description": "Centrífugas, microscopios, analizadores y refrigeradores."
+    },
+    {
+        "id": 9,
+        "name": "Sistemas de Seguridad",
+        "description": "Cámaras de vigilancia, alarmas y controles de acceso."
+    },
+    {
+        "id": 10,
+        "name": "Sistemas Informáticos",
+        "description": "Servidores, computadoras, impresoras y redes."
+    }
+]

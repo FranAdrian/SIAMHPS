@@ -1,0 +1,47 @@
+[
+    {
+        "nombre": "DESKTOP-AA",
+        "tipo": "Monitor de signos vitales",
+        "subtipo": "EEEE",
+        "piso": "3",
+        "area": "Enfermería",
+        "fabricante": "ALPINION",
+        "modelo": "EJ-3MP10",
+        "serie": "12625",
+        "tiempo": "2 meses, 4 dias",
+        "estatus": "Activo"
+    },
+    {
+        "nombre": "MINISONO-EG",
+        "tipo": "Electrocardiografo",
+        "piso": "2",
+        "area": "Servicio social",
+        "fabricante": "ALPINION",
+        "modelo": "EJ-3MP10Modelo",
+        "serie": "0049434",
+        "tiempo": "2 meses, 4 dias",
+        "estatus": "Activo"
+    },
+    {
+        "nombre": "DESKTOP-CC",
+        "tipo": "Monitor de signos vitales",
+        "piso": "3",
+        "area": "Mantenimiento",
+        "fabricante": "ALPINION",
+        "modelo": "EJ-3MP10",
+        "serie": "445227",
+        "tiempo": "2 meses, 4 dias",
+        "estatus": "Activo"
+    },
+    {
+        "nombre": "DESKTOP-CC",
+        "tipo": "Monitor de signos vitales",
+        "piso": "3",
+        "area": "Mantenimiento",
+        "fabricante": "ALPINION",
+        "modelo": "EJ-3MP10",
+        "serie": "445227",
+        "tiempo": "2 meses, 4 dias",
+        "estatus": "Activo"
+    }
+]
