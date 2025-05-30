@@ -16,6 +16,19 @@ Este proyecto es un sistema de inventario diseñado para gestionar activos, usua
 
 ---
 
+## Cambios Recientes
+
+- Se mejoró la validación de formularios en el registro y login, mostrando animaciones y mensajes de error.
+- Se implementó la carga dinámica de la barra de navegación en todas las páginas principales.
+- Se agregó la funcionalidad de guardar temporalmente los datos del formulario de nuevo activo usando `sessionStorage`.
+- Se añadió la opción de alternar la disposición de las tablas de logs entre vertical y horizontal.
+- Se mejoró la visualización de usuarios en la selección, mostrando el rol de administrador con un icono.
+- Se agregaron nuevas secciones de configuración: alertas automáticas, umbrales, respaldos, idioma, formato de fecha y registro de cambios.
+- Se optimizó la carga de datos de usuario y activos desde archivos JSON.
+- Se mejoró el diseño responsivo y la experiencia de usuario en formularios y tablas.
+
+---
+
 ## Descripción de Archivos
 
 ### **HTML**
@@ -33,11 +46,11 @@ Este proyecto es un sistema de inventario diseñado para gestionar activos, usua
 
 ### **JavaScript**
 - **`js/login.js`**: Valida el formulario de inicio de sesión y redirige a la selección de usuario.
-- **`js/register.js`**: Valida los campos del formulario de registro, incluyendo correo electrónico.
+- **`js/register.js`**: Valida los campos del formulario de registro, incluyendo correo electrónico y animaciones de error.
 - **`js/navbar.js`**: Carga dinámicamente la barra de navegación desde [`navbar.html`](sistemaInventarioHPS/navbar.html) y resalta la página activa.
 - **`js/tables.js`**: Añade funcionalidades a las tablas: resaltado de celdas vacías, animación de texto desbordado y filtrado de datos.
-- **`js/new_Input_Modal.js`**: Controla la apertura, cierre y funcionalidad del modal para añadir nuevos activos, guardando datos temporalmente.
-- **`js/users.js`**: Genera dinámicamente la lista de usuarios en la selección de usuario, mostrando si son administradores.
+- **`js/new_Input_Modal.js`**: Controla la apertura, cierre y funcionalidad del modal para añadir nuevos activos, guardando datos temporalmente en `sessionStorage`.
+- **`js/users.js`**: Genera dinámicamente la lista de usuarios en la selección de usuario, mostrando si son administradores con un icono.
 - **`js/config.js`**: Controla la navegación entre secciones de la página de configuración.
 - **`js/measure_Units.js`**: Carga las unidades de medida disponibles en la sección de configuración.
 - **`js/logs.js`**: Permite alternar la disposición de las tablas de logs entre vertical y horizontal.
